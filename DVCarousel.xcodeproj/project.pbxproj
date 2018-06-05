@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		160527E720C56CB6001E0E67 /* 00.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 160527E620C56CB6001E0E67 /* 00.jpg */; };
 		1679B0E520B5741300EE7E5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1679B0E420B5741300EE7E5A /* AppDelegate.swift */; };
 		1679B0E720B5741300EE7E5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1679B0E620B5741300EE7E5A /* ViewController.swift */; };
 		1679B0EA20B5741300EE7E5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1679B0E820B5741300EE7E5A /* Main.storyboard */; };
@@ -14,6 +15,14 @@
 		1679B0EF20B5741300EE7E5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1679B0ED20B5741300EE7E5A /* LaunchScreen.storyboard */; };
 		1679B0FA20B5741300EE7E5A /* DVCarouselTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1679B0F920B5741300EE7E5A /* DVCarouselTests.swift */; };
 		1679B10520B5741300EE7E5A /* DVCarouselUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1679B10420B5741300EE7E5A /* DVCarouselUITests.swift */; };
+		169DE0DC20B588DF00F06B12 /* DVCarouselScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169DE0DB20B588DF00F06B12 /* DVCarouselScrollView.swift */; };
+		169DE0DE20B588F500F06B12 /* DVCarouselDotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169DE0DD20B588F500F06B12 /* DVCarouselDotView.swift */; };
+		169DE0E020B5891500F06B12 /* DVCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169DE0DF20B5891500F06B12 /* DVCarouselCell.swift */; };
+		169DE0E220B5892600F06B12 /* DVCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169DE0E120B5892600F06B12 /* DVCarouselView.swift */; };
+		169DE0E420B589E600F06B12 /* DVCarouselPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169DE0E320B589E600F06B12 /* DVCarouselPageControl.swift */; };
+		16D650FD20BECB66005CC364 /* sample.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D650FC20BECB66005CC364 /* sample.png */; };
+		16D650FF20BECD37005CC364 /* 22.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D650FE20BECD37005CC364 /* 22.png */; };
+		16D6510120BECD40005CC364 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D6510020BECD40005CC364 /* 3.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		160527E620C56CB6001E0E67 /* 00.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 00.jpg; sourceTree = "<group>"; };
 		1679B0E120B5741300EE7E5A /* DVCarousel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DVCarousel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1679B0E420B5741300EE7E5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1679B0E620B5741300EE7E5A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +57,14 @@
 		1679B10020B5741300EE7E5A /* DVCarouselUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DVCarouselUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1679B10420B5741300EE7E5A /* DVCarouselUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCarouselUITests.swift; sourceTree = "<group>"; };
 		1679B10620B5741300EE7E5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		169DE0DB20B588DF00F06B12 /* DVCarouselScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCarouselScrollView.swift; sourceTree = "<group>"; };
+		169DE0DD20B588F500F06B12 /* DVCarouselDotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCarouselDotView.swift; sourceTree = "<group>"; };
+		169DE0DF20B5891500F06B12 /* DVCarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCarouselCell.swift; sourceTree = "<group>"; };
+		169DE0E120B5892600F06B12 /* DVCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCarouselView.swift; sourceTree = "<group>"; };
+		169DE0E320B589E600F06B12 /* DVCarouselPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCarouselPageControl.swift; sourceTree = "<group>"; };
+		16D650FC20BECB66005CC364 /* sample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sample.png; sourceTree = "<group>"; };
+		16D650FE20BECD37005CC364 /* 22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 22.png; sourceTree = "<group>"; };
+		16D6510020BECD40005CC364 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +117,7 @@
 			children = (
 				1679B0E420B5741300EE7E5A /* AppDelegate.swift */,
 				1679B0E620B5741300EE7E5A /* ViewController.swift */,
+				169DE0DA20B5764B00F06B12 /* DVCarouselView */,
 				1679B0E820B5741300EE7E5A /* Main.storyboard */,
 				1679B0EB20B5741300EE7E5A /* Assets.xcassets */,
 				1679B0ED20B5741300EE7E5A /* LaunchScreen.storyboard */,
@@ -123,6 +142,22 @@
 				1679B10620B5741300EE7E5A /* Info.plist */,
 			);
 			path = DVCarouselUITests;
+			sourceTree = "<group>";
+		};
+		169DE0DA20B5764B00F06B12 /* DVCarouselView */ = {
+			isa = PBXGroup;
+			children = (
+				16D650FE20BECD37005CC364 /* 22.png */,
+				160527E620C56CB6001E0E67 /* 00.jpg */,
+				16D6510020BECD40005CC364 /* 3.png */,
+				16D650FC20BECB66005CC364 /* sample.png */,
+				169DE0DB20B588DF00F06B12 /* DVCarouselScrollView.swift */,
+				169DE0DD20B588F500F06B12 /* DVCarouselDotView.swift */,
+				169DE0DF20B5891500F06B12 /* DVCarouselCell.swift */,
+				169DE0E120B5892600F06B12 /* DVCarouselView.swift */,
+				169DE0E320B589E600F06B12 /* DVCarouselPageControl.swift */,
+			);
+			path = DVCarouselView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +270,10 @@
 				1679B0EF20B5741300EE7E5A /* LaunchScreen.storyboard in Resources */,
 				1679B0EC20B5741300EE7E5A /* Assets.xcassets in Resources */,
 				1679B0EA20B5741300EE7E5A /* Main.storyboard in Resources */,
+				16D650FF20BECD37005CC364 /* 22.png in Resources */,
+				16D6510120BECD40005CC364 /* 3.png in Resources */,
+				16D650FD20BECB66005CC364 /* sample.png in Resources */,
+				160527E720C56CB6001E0E67 /* 00.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +298,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				169DE0E220B5892600F06B12 /* DVCarouselView.swift in Sources */,
+				169DE0DE20B588F500F06B12 /* DVCarouselDotView.swift in Sources */,
+				169DE0E020B5891500F06B12 /* DVCarouselCell.swift in Sources */,
+				169DE0E420B589E600F06B12 /* DVCarouselPageControl.swift in Sources */,
 				1679B0E720B5741300EE7E5A /* ViewController.swift in Sources */,
 				1679B0E520B5741300EE7E5A /* AppDelegate.swift in Sources */,
+				169DE0DC20B588DF00F06B12 /* DVCarouselScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +471,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZP2U5TZHDY;
 				INFOPLIST_FILE = DVCarousel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iber.DVCarousel;
@@ -441,6 +486,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZP2U5TZHDY;
 				INFOPLIST_FILE = DVCarousel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iber.DVCarousel;
