@@ -16,6 +16,9 @@ class ViewController: UIViewController {
         view.autoScroll = true
         view.ScrollTimeInterval = 3
         view.localizationImageNameArray = ["sample","22","3","22",]
+        view.blockselectCarousel = {(param)->Void in
+            view.delayStartTimer()
+        }
         self.view.addSubview(view)
         // 看到自己写的这种堆功能的乱代码，我也是笑了。
     }

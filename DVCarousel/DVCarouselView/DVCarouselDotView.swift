@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class DVCarouselDotView: UIView {
+public class DVCarouselDotView: UIView {
 
     lazy private var pageControl : UIPageControl={
        let page = UIPageControl.init()
@@ -25,11 +25,11 @@ open class DVCarouselDotView: UIView {
 
 
 extension DVCarouselDotView{
-    @objc public func setSelectIndex(index:Int){
+     public func setSelectIndex(index:Int){
         self.pageControl.currentPage = index
     }
     
-    @objc public func setDotNumber(number:Int){
+     public func setDotNumber(number:Int){
         self.pageControl.numberOfPages = number
     }
 }

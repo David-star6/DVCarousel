@@ -17,9 +17,7 @@
 		1679B10520B5741300EE7E5A /* DVCarouselUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1679B10420B5741300EE7E5A /* DVCarouselUITests.swift */; };
 		169DE0DC20B588DF00F06B12 /* DVCarouselScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169DE0DB20B588DF00F06B12 /* DVCarouselScrollView.swift */; };
 		169DE0DE20B588F500F06B12 /* DVCarouselDotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169DE0DD20B588F500F06B12 /* DVCarouselDotView.swift */; };
-		169DE0E020B5891500F06B12 /* DVCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169DE0DF20B5891500F06B12 /* DVCarouselCell.swift */; };
 		169DE0E220B5892600F06B12 /* DVCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169DE0E120B5892600F06B12 /* DVCarouselView.swift */; };
-		169DE0E420B589E600F06B12 /* DVCarouselPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169DE0E320B589E600F06B12 /* DVCarouselPageControl.swift */; };
 		16D650FD20BECB66005CC364 /* sample.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D650FC20BECB66005CC364 /* sample.png */; };
 		16D650FF20BECD37005CC364 /* 22.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D650FE20BECD37005CC364 /* 22.png */; };
 		16D6510120BECD40005CC364 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D6510020BECD40005CC364 /* 3.png */; };
@@ -59,9 +57,7 @@
 		1679B10620B5741300EE7E5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		169DE0DB20B588DF00F06B12 /* DVCarouselScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCarouselScrollView.swift; sourceTree = "<group>"; };
 		169DE0DD20B588F500F06B12 /* DVCarouselDotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCarouselDotView.swift; sourceTree = "<group>"; };
-		169DE0DF20B5891500F06B12 /* DVCarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCarouselCell.swift; sourceTree = "<group>"; };
 		169DE0E120B5892600F06B12 /* DVCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCarouselView.swift; sourceTree = "<group>"; };
-		169DE0E320B589E600F06B12 /* DVCarouselPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCarouselPageControl.swift; sourceTree = "<group>"; };
 		16D650FC20BECB66005CC364 /* sample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sample.png; sourceTree = "<group>"; };
 		16D650FE20BECD37005CC364 /* 22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 22.png; sourceTree = "<group>"; };
 		16D6510020BECD40005CC364 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
@@ -153,9 +149,7 @@
 				16D650FC20BECB66005CC364 /* sample.png */,
 				169DE0DB20B588DF00F06B12 /* DVCarouselScrollView.swift */,
 				169DE0DD20B588F500F06B12 /* DVCarouselDotView.swift */,
-				169DE0DF20B5891500F06B12 /* DVCarouselCell.swift */,
 				169DE0E120B5892600F06B12 /* DVCarouselView.swift */,
-				169DE0E320B589E600F06B12 /* DVCarouselPageControl.swift */,
 			);
 			path = DVCarouselView;
 			sourceTree = "<group>";
@@ -300,8 +294,6 @@
 			files = (
 				169DE0E220B5892600F06B12 /* DVCarouselView.swift in Sources */,
 				169DE0DE20B588F500F06B12 /* DVCarouselDotView.swift in Sources */,
-				169DE0E020B5891500F06B12 /* DVCarouselCell.swift in Sources */,
-				169DE0E420B589E600F06B12 /* DVCarouselPageControl.swift in Sources */,
 				1679B0E720B5741300EE7E5A /* ViewController.swift in Sources */,
 				1679B0E520B5741300EE7E5A /* AppDelegate.swift in Sources */,
 				169DE0DC20B588DF00F06B12 /* DVCarouselScrollView.swift in Sources */,

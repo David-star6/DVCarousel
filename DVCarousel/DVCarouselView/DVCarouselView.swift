@@ -8,13 +8,41 @@
 
 import UIKit
 
-class DVCarouselView: UIImageView {
+protocol DVCarouselViewDelegate:NSObjectProtocol {
+    func carouselViewWithTapHandle()
+}
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-  
-    */
+public class DVCarouselView: UIView {
     
+    weak var delegate : DVCarouselViewDelegate?
+    
+    private lazy var singleTapGesture : UITapGestureRecognizer = {
+        let tap = UITapGestureRecognizer.init(target: self, action: #selector(self.tapHandle))
+        return tap
+    }()
+    
+    public lazy var backgroundImg : UIImageView = {
+        let imae = UIImageView.init(frame: self.bounds)
+        imae.isUserInteractionEnabled = false
+        return imae
+    }()
+    
+    public override func setNeedsLayout() {
+        self.addSubview(self.backgroundImg)
+        self.addGestureRecognizer(self.singleTapGesture)
+    }
+    
+    public override func draw(_ layer: CALayer, in ctx: CGContext) {
+        self.isUserInteractionEnabled = true
+    }
+    
+    @objc private func tapHandle(sender:UIGestureRecognizer){
+        self.delegate?.carouselViewWithTapHandle()
+    }
 
+}
+
+extension DVCarouselDotView{
+    
+   
 }

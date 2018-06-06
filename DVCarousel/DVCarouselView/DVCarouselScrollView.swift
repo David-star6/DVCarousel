@@ -8,8 +8,11 @@
 
 import UIKit
 
-open class DVCarouselScrollView: UIView ,UIScrollViewDelegate {
+@objc protocol DVCarouselScrollViewDelegate : NSObjectProtocol  {
+    @objc optional func selectCarousel(index:Int)
+}
 
+open class DVCarouselScrollView: UIView ,UIScrollViewDelegate ,DVCarouselViewDelegate {
     // 本地图片
     @objc public var localizationImageNameArray : [String]?{
         didSet{
@@ -22,6 +25,9 @@ open class DVCarouselScrollView: UIView ,UIScrollViewDelegate {
             self.sourceArray = imageUrlStringArray as [AnyObject]?
         }
     }
+    var blockselectCarousel : ((Int) -> (Void))?
+    // 代理
+    weak var carouseDelegate :DVCarouselScrollViewDelegate?
     // 预加载图片
     @objc public var placeholderImage : UIImage?
     // 存放图片的数组
@@ -104,7 +110,7 @@ extension DVCarouselScrollView{
         return carouselView
     }
     
-    /*设置控件的图片类型*/
+    //设置控件的图片类型
     @objc private func setUI(localImageArray: [String]?,imageUrlArray:[String]?,imageViewArray:[UIImageView]?,loadImage:UIImage?){
         self.localizationImageNameArray = localImageArray
         self.imageUrlStringArray = imageUrlArray
@@ -117,58 +123,68 @@ extension DVCarouselScrollView{
 extension DVCarouselScrollView {
     
     public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        self.cleanTimer()
-        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(setupTimer), object: "setupTimer")
+      self.pause()
     }
     
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if(scrollView.contentOffset.x <= 0){
-            self.scrollTimer != nil ? self.onPageRight() :  self.onPageLeft()
+            self.scrollTimer != nil ? self.onPageRight() : self.onPageLeft()
         } else if (scrollView.contentOffset.x >= scrollView.frame.width * 2){
             self.scrollTimer != nil ? self.onPageLeft() : self.onPageRight()
         }
     }
     
     public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        self.perform(#selector(setupTimer), with: "setupTimer", afterDelay: self.ScrollTimeInterval)
+        self.delayStartTimer()
     }
 
 }
 
 // MARK: -- 滑动时间
 extension DVCarouselScrollView{
+    // 暂停
+    private func pause(){
+        self.cleanTimer()
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(setupTimer), object: "setupTimer")
+    }
+    // 延时启动
+    @objc public func delayStartTimer(){
+        self.perform(#selector(setupTimer), with: "setupTimer", afterDelay: self.ScrollTimeInterval)
+    }
+     // 滑动开始
     @objc public func setupTimer(){
         if self.scrollTimer != nil {return}
         self.scrollTimer = Timer.scheduledTimer(timeInterval: self.ScrollTimeInterval, target: self, selector: #selector(automaticScroll), userInfo: nil, repeats: true)
         RunLoop.main.add(self.scrollTimer!, forMode: .commonModes)
     }
-    
-    @objc public func cleanTimer(){
+     // 清除滑动
+    public func cleanTimer(){
         self.scrollTimer?.invalidate()
         self.scrollTimer = nil
     }
-    
+     // 滑动
     @objc private func automaticScroll(){
-          self.scrollView.contentOffset = CGPoint.init(x: 0, y: 0)
+        self.scrollWithAnimation(x: 0, animation: false)
+    }
+    private func scrollWithAnimation(x:CGFloat, animation:Bool){
+        self.scrollView.setContentOffset(CGPoint.init(x: x, y: 0), animated: animation)
     }
 }
 
 // MARK: -- 滑動视图
 extension DVCarouselScrollView{
-    
-    @objc private func loadDynamic(){
+     // 视图滚动
+     private func loadDynamic(){
         for i in 0...2{
-//            let index = ( -i - 1 + self.currentIndex() + self.getShowCount()) % self.getShowCount()
-//            let index = ( -i + 1 + self.currentIndex() + self.getShowCount()) % self.getShowCount()
             let index = ( i - 1 + self.currentIndex() + self.getShowCount()) % self.getShowCount()
             let imgView =  self.imageViewArray![i]
             imgView.image = self.getImageWithArray(index: index)
         }
-        self.scrollTimer != nil  ? self.scrollView.setContentOffset(CGPoint.init(x: self.frame.width, y: 0), animated: true) : self.scrollView.setContentOffset(CGPoint.init(x: self.frame.width, y: 0), animated: false)
+        self.scrollTimer != nil ? self.scrollWithAnimation(x: self.frame.width, animation: true) : self.scrollWithAnimation(x: self.frame.width, animation: false)
         self.dotView.setSelectIndex(index: self.currentIndex())
     }
-    
-    @objc private func getImageWithArray(index:Int)-> UIImage {
+     // 获取滚动图片的下标
+     private func getImageWithArray(index:Int)-> UIImage {
         var img : UIImage?
         if self.localizationImageNameArray != nil {
             img =  UIImage.init(named: self.localizationImageNameArray![index])
@@ -177,35 +193,45 @@ extension DVCarouselScrollView{
         }
         return img!
     }
-    
-    @objc private func creatScrollView(){
+     // 生成视图
+     private func creatScrollView(){
         for i in 0...2 {
             let x = CGFloat(i) * self.frame.width
             let width = self.frame.width
             let height = self.frame.height
             let imageView = DVCarouselView.init(frame: CGRect.init(x: x, y: 0, width: width, height: height))
-            imageView.backgroundColor = UIColor.blue
-            imageView.isUserInteractionEnabled = false
+            imageView.delegate = self as DVCarouselViewDelegate
             self.scrollView.addSubview(imageView)
-            self.imageViewArray?.append(imageView)
+            self.imageViewArray?.append(imageView.backgroundImg)
         }
     }
-    
-    @objc private func onPageLeft(){
+     // delegate 点击以后暂停
+     func carouselViewWithTapHandle() {
+        self.pause()
+        if self.carouseDelegate != nil {
+            self.carouseDelegate?.selectCarousel!(index: self.currentIndex())
+        }else if(self.blockselectCarousel != nil) {
+            self.blockselectCarousel!(self.currentIndex())
+        }
+    }
+
+     private func onPageLeft(){
         self.current = ( -1 + self.current + self.getShowCount()) % self.getShowCount();
         self.loadDynamic()
     }
     
-    @objc private func onPageRight(){
+     private func onPageRight(){
         self.current = ( 1 + self.current + self.getShowCount()) % self.getShowCount();
         self.loadDynamic()
     }
     
-    @objc private func getShowCount() -> Int{
+     private func getShowCount() -> Int{
         return self.sourceCount
     }
     
-    @objc private func currentIndex() -> Int{
+     private func currentIndex() -> Int{
         return current
     }
 }
+
+
