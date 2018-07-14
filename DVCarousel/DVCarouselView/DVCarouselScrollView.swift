@@ -27,15 +27,15 @@ open class DVCarouselScrollView: UIView ,UIScrollViewDelegate ,DVCarouselViewDel
     }
     var blockselectCarousel : ((Int) -> (Void))?
     // 代理
-    weak var carouseDelegate :DVCarouselScrollViewDelegate?
+    @objc weak var carouseDelegate :DVCarouselScrollViewDelegate?
     // 预加载图片
     @objc public var placeholderImage : UIImage?
     // 存放图片的数组
-    @objc public var imageViewArray : [UIImageView]? = [UIImageView]()
+    @objc public var imageViewArray : [DVCarouselView]? = [DVCarouselView]()
     // 轮播定时器
-    @objc private var scrollTimer : Timer?
+    private var scrollTimer : Timer?
     //传入的资源
-    @objc private var sourceArray : [AnyObject]? {
+    private var sourceArray : [AnyObject]? {
         didSet{
           self.layoutIfNeeded()
         }
@@ -104,18 +104,31 @@ open class DVCarouselScrollView: UIView ,UIScrollViewDelegate ,DVCarouselViewDel
 // MARK: - 初始化方法
 extension DVCarouselScrollView{
     
-    @objc open class func alloc(frame:CGRect)-> DVCarouselScrollView{
+    @objc open class func carousel(frame:CGRect)-> DVCarouselScrollView{
         let carouselView = DVCarouselScrollView(frame:frame)
         carouselView.setUI(localImageArray: nil, imageUrlArray: nil, imageViewArray: nil, loadImage: nil)
         return carouselView
     }
     
+    @objc open class func carouselImage(localizationImageNameArray:[String]?,frame:CGRect) -> DVCarouselScrollView{
+        let carouselView = DVCarouselScrollView(frame:frame)
+        carouselView.setUI(localImageArray: localizationImageNameArray, imageUrlArray: nil, imageViewArray: nil, loadImage: nil)
+        return carouselView
+    }
+    
+    @objc open class func carouselImage(imageUrlStrArray:[String]?,placeholderImage:UIImage?,frame:CGRect) -> DVCarouselScrollView{
+        let carouselView = DVCarouselScrollView(frame:frame)
+        carouselView.setUI(localImageArray: nil, imageUrlArray: imageUrlStrArray, imageViewArray: nil, loadImage: nil)
+        return carouselView
+    }
+    
     //设置控件的图片类型
-    @objc private func setUI(localImageArray: [String]?,imageUrlArray:[String]?,imageViewArray:[UIImageView]?,loadImage:UIImage?){
+    private func setUI(localImageArray: [String]?,imageUrlArray:[String]?,imageViewArray:[UIImageView]?,loadImage:UIImage?){
         self.localizationImageNameArray = localImageArray
         self.imageUrlStringArray = imageUrlArray
         self.placeholderImage = loadImage
     }
+    
 }
 
 
@@ -178,21 +191,13 @@ extension DVCarouselScrollView{
         for i in 0...2{
             let index = ( i - 1 + self.currentIndex() + self.getShowCount()) % self.getShowCount()
             let imgView =  self.imageViewArray![i]
-            imgView.image = self.getImageWithArray(index: index)
+            imgView.setupUI(imageName: self.localizationImageNameArray != nil ? self.localizationImageNameArray![index] : nil , imageUrl:(self.imageUrlStringArray != nil) ? (self.imageUrlStringArray)![index] : nil , placeholderImage: self.placeholderImage != nil ? self.placeholderImage : nil )
+//            imgView.image = self.getImageWithArray(index: index)
         }
         self.scrollTimer != nil ? self.scrollWithAnimation(x: self.frame.width, animation: true) : self.scrollWithAnimation(x: self.frame.width, animation: false)
         self.dotView.setSelectIndex(index: self.currentIndex())
     }
-     // 获取滚动图片的下标
-     private func getImageWithArray(index:Int)-> UIImage {
-        var img : UIImage?
-        if self.localizationImageNameArray != nil {
-            img =  UIImage.init(named: self.localizationImageNameArray![index])
-        } else if self.imageUrlStringArray != nil {
-            img =  UIImage.init(named: self.imageUrlStringArray![index])
-        }
-        return img!
-    }
+    
      // 生成视图
      private func creatScrollView(){
         for i in 0...2 {
@@ -202,12 +207,14 @@ extension DVCarouselScrollView{
             let imageView = DVCarouselView.init(frame: CGRect.init(x: x, y: 0, width: width, height: height))
             imageView.delegate = self as DVCarouselViewDelegate
             self.scrollView.addSubview(imageView)
-            self.imageViewArray?.append(imageView.backgroundImg)
+//            self.imageViewArray?.append(imageView.backgroundImg)
+            self.imageViewArray?.append(imageView)
         }
     }
      // delegate 点击以后暂停
      func carouselViewWithTapHandle() {
         self.pause()
+        self.delayStartTimer()
         if self.carouseDelegate != nil {
             self.carouseDelegate?.selectCarousel!(index: self.currentIndex())
         }else if(self.blockselectCarousel != nil) {

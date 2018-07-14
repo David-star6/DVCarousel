@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 protocol DVCarouselViewDelegate:NSObjectProtocol {
     func carouselViewWithTapHandle()
@@ -21,9 +22,12 @@ public class DVCarouselView: UIView {
         return tap
     }()
     
+    
     public lazy var backgroundImg : UIImageView = {
         let imae = UIImageView.init(frame: self.bounds)
         imae.isUserInteractionEnabled = false
+        imae.contentMode = .scaleAspectFill
+        imae.clipsToBounds = true
         return imae
     }()
     
@@ -38,6 +42,14 @@ public class DVCarouselView: UIView {
     
     @objc private func tapHandle(sender:UIGestureRecognizer){
         self.delegate?.carouselViewWithTapHandle()
+    }
+    
+    public func setupUI(imageName: String?, imageUrl: String?, placeholderImage: UIImage?) {
+        if imageName != nil {
+            self.backgroundImg.image = UIImage(named: imageName!)
+        } else if imageUrl != nil {
+            self.backgroundImg.kf.setImage(with: URL(string: imageUrl!), placeholder: placeholderImage, options: nil, progressBlock: nil, completionHandler: nil)
+        }
     }
 
 }

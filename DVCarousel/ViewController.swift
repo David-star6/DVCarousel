@@ -12,12 +12,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let view = DVCarouselScrollView.alloc(frame: CGRect.init(x: 0, y: 0, width: 375, height: 300))
+//        let view = DVCarouselScrollView.carousel(frame: CGRect.init(x: 0, y: 0, width: 375, height: 300))
+        let view = DVCarouselScrollView.carouselImage(localizationImageNameArray: ["sample","1","2","3",], frame: CGRect.init(x: 0, y: 0, width: 375, height: 300))
         view.autoScroll = true
         view.ScrollTimeInterval = 3
-        view.localizationImageNameArray = ["sample","22","3","22",]
+//        view.localizationImageNameArray = ["sample","22","3","22",]
         view.blockselectCarousel = {(param)->Void in
-            view.delayStartTimer()
+            print(param)
         }
         self.view.addSubview(view)
         // 看到自己写的这种堆功能的乱代码，我也是笑了。

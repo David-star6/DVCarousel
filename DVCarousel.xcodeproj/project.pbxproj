@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		160527E720C56CB6001E0E67 /* 00.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 160527E620C56CB6001E0E67 /* 00.jpg */; };
 		1679B0E520B5741300EE7E5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1679B0E420B5741300EE7E5A /* AppDelegate.swift */; };
 		1679B0E720B5741300EE7E5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1679B0E620B5741300EE7E5A /* ViewController.swift */; };
 		1679B0EA20B5741300EE7E5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1679B0E820B5741300EE7E5A /* Main.storyboard */; };
@@ -15,12 +14,16 @@
 		1679B0EF20B5741300EE7E5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1679B0ED20B5741300EE7E5A /* LaunchScreen.storyboard */; };
 		1679B0FA20B5741300EE7E5A /* DVCarouselTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1679B0F920B5741300EE7E5A /* DVCarouselTests.swift */; };
 		1679B10520B5741300EE7E5A /* DVCarouselUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1679B10420B5741300EE7E5A /* DVCarouselUITests.swift */; };
+		167B508720F9FCDC00F54F65 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 167B508420F9FCDC00F54F65 /* 3.png */; };
+		167B508820F9FCDC00F54F65 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 167B508520F9FCDC00F54F65 /* 1.png */; };
+		167B508920F9FCDC00F54F65 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 167B508620F9FCDC00F54F65 /* 2.png */; };
 		169DE0DC20B588DF00F06B12 /* DVCarouselScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169DE0DB20B588DF00F06B12 /* DVCarouselScrollView.swift */; };
 		169DE0DE20B588F500F06B12 /* DVCarouselDotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169DE0DD20B588F500F06B12 /* DVCarouselDotView.swift */; };
 		169DE0E220B5892600F06B12 /* DVCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169DE0E120B5892600F06B12 /* DVCarouselView.swift */; };
 		16D650FD20BECB66005CC364 /* sample.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D650FC20BECB66005CC364 /* sample.png */; };
-		16D650FF20BECD37005CC364 /* 22.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D650FE20BECD37005CC364 /* 22.png */; };
-		16D6510120BECD40005CC364 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D6510020BECD40005CC364 /* 3.png */; };
+		3E89C7A4502BE1773B181092 /* Pods_DVCarouselTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F3A9325B4385595882685C2 /* Pods_DVCarouselTests.framework */; };
+		6F0B4D0F837BF75A6FBCE853 /* Pods_DVCarouselUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E952E8ABE40868B44712394F /* Pods_DVCarouselUITests.framework */; };
+		DDA8359B2E158BF63D0ECA0B /* Pods_DVCarousel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79AD9AA8CBFC424CE54EC107 /* Pods_DVCarousel.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +44,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		160527E620C56CB6001E0E67 /* 00.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 00.jpg; sourceTree = "<group>"; };
 		1679B0E120B5741300EE7E5A /* DVCarousel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DVCarousel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1679B0E420B5741300EE7E5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1679B0E620B5741300EE7E5A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,12 +57,22 @@
 		1679B10020B5741300EE7E5A /* DVCarouselUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DVCarouselUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1679B10420B5741300EE7E5A /* DVCarouselUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCarouselUITests.swift; sourceTree = "<group>"; };
 		1679B10620B5741300EE7E5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		167B508420F9FCDC00F54F65 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		167B508520F9FCDC00F54F65 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		167B508620F9FCDC00F54F65 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		169DE0DB20B588DF00F06B12 /* DVCarouselScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCarouselScrollView.swift; sourceTree = "<group>"; };
 		169DE0DD20B588F500F06B12 /* DVCarouselDotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCarouselDotView.swift; sourceTree = "<group>"; };
 		169DE0E120B5892600F06B12 /* DVCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCarouselView.swift; sourceTree = "<group>"; };
 		16D650FC20BECB66005CC364 /* sample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sample.png; sourceTree = "<group>"; };
-		16D650FE20BECD37005CC364 /* 22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 22.png; sourceTree = "<group>"; };
-		16D6510020BECD40005CC364 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		41E6376EBD8A46F80C5F54AB /* Pods-DVCarouselUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DVCarouselUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DVCarouselUITests/Pods-DVCarouselUITests.release.xcconfig"; sourceTree = "<group>"; };
+		79AD9AA8CBFC424CE54EC107 /* Pods_DVCarousel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DVCarousel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DB30BF94757D7C65EADA3BA /* Pods-DVCarouselTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DVCarouselTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DVCarouselTests/Pods-DVCarouselTests.release.xcconfig"; sourceTree = "<group>"; };
+		851E73BC8E9C2B288E0A7D5A /* Pods-DVCarouselUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DVCarouselUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DVCarouselUITests/Pods-DVCarouselUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8F3A9325B4385595882685C2 /* Pods_DVCarouselTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DVCarouselTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A13AEBA1917C7A253F73A822 /* Pods-DVCarouselTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DVCarouselTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DVCarouselTests/Pods-DVCarouselTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A900FE14BACD17DB15B80EBA /* Pods-DVCarousel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DVCarousel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DVCarousel/Pods-DVCarousel.debug.xcconfig"; sourceTree = "<group>"; };
+		B5CCC392021C15F777030CFF /* Pods-DVCarousel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DVCarousel.release.xcconfig"; path = "Pods/Target Support Files/Pods-DVCarousel/Pods-DVCarousel.release.xcconfig"; sourceTree = "<group>"; };
+		E952E8ABE40868B44712394F /* Pods_DVCarouselUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DVCarouselUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDA8359B2E158BF63D0ECA0B /* Pods_DVCarousel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E89C7A4502BE1773B181092 /* Pods_DVCarouselTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F0B4D0F837BF75A6FBCE853 /* Pods_DVCarouselUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +110,8 @@
 				1679B0F820B5741300EE7E5A /* DVCarouselTests */,
 				1679B10320B5741300EE7E5A /* DVCarouselUITests */,
 				1679B0E220B5741300EE7E5A /* Products */,
+				BE18310DEAD2D3FC25985BE9 /* Pods */,
+				66E55C632137347B8C99189E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,15 +160,38 @@
 		169DE0DA20B5764B00F06B12 /* DVCarouselView */ = {
 			isa = PBXGroup;
 			children = (
-				16D650FE20BECD37005CC364 /* 22.png */,
-				160527E620C56CB6001E0E67 /* 00.jpg */,
-				16D6510020BECD40005CC364 /* 3.png */,
+				167B508520F9FCDC00F54F65 /* 1.png */,
+				167B508620F9FCDC00F54F65 /* 2.png */,
+				167B508420F9FCDC00F54F65 /* 3.png */,
 				16D650FC20BECB66005CC364 /* sample.png */,
 				169DE0DB20B588DF00F06B12 /* DVCarouselScrollView.swift */,
 				169DE0DD20B588F500F06B12 /* DVCarouselDotView.swift */,
 				169DE0E120B5892600F06B12 /* DVCarouselView.swift */,
 			);
 			path = DVCarouselView;
+			sourceTree = "<group>";
+		};
+		66E55C632137347B8C99189E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79AD9AA8CBFC424CE54EC107 /* Pods_DVCarousel.framework */,
+				8F3A9325B4385595882685C2 /* Pods_DVCarouselTests.framework */,
+				E952E8ABE40868B44712394F /* Pods_DVCarouselUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE18310DEAD2D3FC25985BE9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A900FE14BACD17DB15B80EBA /* Pods-DVCarousel.debug.xcconfig */,
+				B5CCC392021C15F777030CFF /* Pods-DVCarousel.release.xcconfig */,
+				A13AEBA1917C7A253F73A822 /* Pods-DVCarouselTests.debug.xcconfig */,
+				7DB30BF94757D7C65EADA3BA /* Pods-DVCarouselTests.release.xcconfig */,
+				851E73BC8E9C2B288E0A7D5A /* Pods-DVCarouselUITests.debug.xcconfig */,
+				41E6376EBD8A46F80C5F54AB /* Pods-DVCarouselUITests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,9 +201,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1679B10920B5741300EE7E5A /* Build configuration list for PBXNativeTarget "DVCarousel" */;
 			buildPhases = (
+				E6E11E4C1D61D0DAD168FA9B /* [CP] Check Pods Manifest.lock */,
 				1679B0DD20B5741300EE7E5A /* Sources */,
 				1679B0DE20B5741300EE7E5A /* Frameworks */,
 				1679B0DF20B5741300EE7E5A /* Resources */,
+				1E37BE9174026A8C2CFAC880 /* [CP] Embed Pods Frameworks */,
+				19AEE85D58A3755334E8BBF2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -178,9 +221,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1679B10C20B5741300EE7E5A /* Build configuration list for PBXNativeTarget "DVCarouselTests" */;
 			buildPhases = (
+				200847F4CD6A593D35110BB2 /* [CP] Check Pods Manifest.lock */,
 				1679B0F120B5741300EE7E5A /* Sources */,
 				1679B0F220B5741300EE7E5A /* Frameworks */,
 				1679B0F320B5741300EE7E5A /* Resources */,
+				E990ACCCD7F4366D6F3A2806 /* [CP] Embed Pods Frameworks */,
+				91ADDF3E0F40EE00082816A3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,9 +242,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1679B10F20B5741300EE7E5A /* Build configuration list for PBXNativeTarget "DVCarouselUITests" */;
 			buildPhases = (
+				4629B021D526078F9B5778A7 /* [CP] Check Pods Manifest.lock */,
 				1679B0FC20B5741300EE7E5A /* Sources */,
 				1679B0FD20B5741300EE7E5A /* Frameworks */,
 				1679B0FE20B5741300EE7E5A /* Resources */,
+				3829BF68C486062BD0857D57 /* [CP] Embed Pods Frameworks */,
+				0F37C88D5827497FD309036E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -261,13 +310,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				167B508720F9FCDC00F54F65 /* 3.png in Resources */,
 				1679B0EF20B5741300EE7E5A /* LaunchScreen.storyboard in Resources */,
+				167B508920F9FCDC00F54F65 /* 2.png in Resources */,
 				1679B0EC20B5741300EE7E5A /* Assets.xcassets in Resources */,
+				167B508820F9FCDC00F54F65 /* 1.png in Resources */,
 				1679B0EA20B5741300EE7E5A /* Main.storyboard in Resources */,
-				16D650FF20BECD37005CC364 /* 22.png in Resources */,
-				16D6510120BECD40005CC364 /* 3.png in Resources */,
 				16D650FD20BECB66005CC364 /* sample.png in Resources */,
-				160527E720C56CB6001E0E67 /* 00.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +335,156 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F37C88D5827497FD309036E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DVCarouselUITests/Pods-DVCarouselUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		19AEE85D58A3755334E8BBF2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DVCarousel/Pods-DVCarousel-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1E37BE9174026A8C2CFAC880 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DVCarousel/Pods-DVCarousel-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DVCarousel/Pods-DVCarousel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		200847F4CD6A593D35110BB2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DVCarouselTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3829BF68C486062BD0857D57 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DVCarouselUITests/Pods-DVCarouselUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4629B021D526078F9B5778A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DVCarouselUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91ADDF3E0F40EE00082816A3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DVCarouselTests/Pods-DVCarouselTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6E11E4C1D61D0DAD168FA9B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DVCarousel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E990ACCCD7F4366D6F3A2806 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DVCarouselTests/Pods-DVCarouselTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1679B0DD20B5741300EE7E5A /* Sources */ = {
@@ -460,6 +659,7 @@
 		};
 		1679B10A20B5741300EE7E5A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A900FE14BACD17DB15B80EBA /* Pods-DVCarousel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -475,6 +675,7 @@
 		};
 		1679B10B20B5741300EE7E5A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5CCC392021C15F777030CFF /* Pods-DVCarousel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -490,6 +691,7 @@
 		};
 		1679B10D20B5741300EE7E5A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A13AEBA1917C7A253F73A822 /* Pods-DVCarouselTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -506,6 +708,7 @@
 		};
 		1679B10E20B5741300EE7E5A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DB30BF94757D7C65EADA3BA /* Pods-DVCarouselTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -522,6 +725,7 @@
 		};
 		1679B11020B5741300EE7E5A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 851E73BC8E9C2B288E0A7D5A /* Pods-DVCarouselUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -537,6 +741,7 @@
 		};
 		1679B11120B5741300EE7E5A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41E6376EBD8A46F80C5F54AB /* Pods-DVCarouselUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
