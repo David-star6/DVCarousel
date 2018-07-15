@@ -40,6 +40,15 @@ open class DVCarouselScrollView: UIView ,UIScrollViewDelegate ,DVCarouselViewDel
           self.layoutIfNeeded()
         }
     }
+    // 是否隐藏指示点
+    @objc public var isHiddenDot : Bool = false {
+        didSet{
+            if self.dotView.isHidden != isHiddenDot {
+                self.dotView.isHidden = isHiddenDot
+            }
+        }
+    }
+    
     // 从第几个开始转
     @objc private var current = 0{
         didSet{
@@ -64,6 +73,7 @@ open class DVCarouselScrollView: UIView ,UIScrollViewDelegate ,DVCarouselViewDel
     
     private lazy var dotView : DVCarouselDotView = {
         let dotView = DVCarouselDotView.init(frame: CGRect.init(x: 0, y: self.frame.height - 10, width: self.frame.width, height: 10))
+        dotView.setDotNumber(number: self.getShowCount())
         return dotView
     }()
     
@@ -88,7 +98,6 @@ open class DVCarouselScrollView: UIView ,UIScrollViewDelegate ,DVCarouselViewDel
     }()
     
     open override func layoutSubviews() {
-        self.dotView.setDotNumber(number: self.getShowCount())
         self.addSubview(self.scrollView)
         self.addSubview(self.dotView)
     }
@@ -132,7 +141,7 @@ extension DVCarouselScrollView{
 }
 
 
-// MARK: - scrollView
+// MARK: - scrollViewDelegate
 extension DVCarouselScrollView {
     
     public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
@@ -157,7 +166,7 @@ extension DVCarouselScrollView {
 extension DVCarouselScrollView{
     // 暂停
     private func pause(){
-        self.cleanTimer()
+        self.scrollTimer != nil ? self.cleanTimer() : nil
         NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(setupTimer), object: "setupTimer")
     }
     // 延时启动
@@ -192,10 +201,9 @@ extension DVCarouselScrollView{
             let index = ( i - 1 + self.currentIndex() + self.getShowCount()) % self.getShowCount()
             let imgView =  self.imageViewArray![i]
             imgView.setupUI(imageName: self.localizationImageNameArray != nil ? self.localizationImageNameArray![index] : nil , imageUrl:(self.imageUrlStringArray != nil) ? (self.imageUrlStringArray)![index] : nil , placeholderImage: self.placeholderImage != nil ? self.placeholderImage : nil )
-//            imgView.image = self.getImageWithArray(index: index)
         }
         self.scrollTimer != nil ? self.scrollWithAnimation(x: self.frame.width, animation: true) : self.scrollWithAnimation(x: self.frame.width, animation: false)
-        self.dotView.setSelectIndex(index: self.currentIndex())
+        !self.isHiddenDot ?  self.dotView.setSelectIndex(index: self.currentIndex()) : nil
     }
     
      // 生成视图
@@ -207,12 +215,11 @@ extension DVCarouselScrollView{
             let imageView = DVCarouselView.init(frame: CGRect.init(x: x, y: 0, width: width, height: height))
             imageView.delegate = self as DVCarouselViewDelegate
             self.scrollView.addSubview(imageView)
-//            self.imageViewArray?.append(imageView.backgroundImg)
             self.imageViewArray?.append(imageView)
         }
     }
      // delegate 点击以后暂停
-     func carouselViewWithTapHandle() {
+    internal func carouselViewWithTapHandle() {
         self.pause()
         self.delayStartTimer()
         if self.carouseDelegate != nil {

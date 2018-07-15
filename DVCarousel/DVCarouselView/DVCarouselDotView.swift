@@ -25,10 +25,12 @@ public class DVCarouselDotView: UIView {
 
 
 extension DVCarouselDotView{
+    /*设置当前选中第几个*/
      public func setSelectIndex(index:Int){
         self.pageControl.currentPage = index
     }
     
+    /*设置数量*/
      public func setDotNumber(number:Int){
         self.pageControl.numberOfPages = number
     }
